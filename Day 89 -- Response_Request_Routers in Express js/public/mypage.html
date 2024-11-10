@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Post Request</title>
+</head>
+<body>
+    <script>
+        async function testPost(){
+            // let a = await fetch("/", {method: "POST"})
+            // let a = await fetch("/", {method: "PUT"})
+            let a = await fetch("/", {method: "DELETE"})
+            let b = await a.text()
+            console.log(b)
+        }
+
+        testPost()
+    </script>
+</body>
+</html>
+
+<!--
+let a = await fetch("/", { method: "POST" });:
+
+This line sends a POST request to the root URL ("/").
+
+fetch() is used to make network requests. Here, it is set with { method: "POST" }, specifying that this is a POST request (as opposed to the default GET).
+
+await pauses the execution of the function until the fetch() promise is resolved, meaning it waits for the server to respond. 
+ -->
+
+
+<!--
+ let b = await a.text();:
+
+This line waits for the response (a) to be converted to text format.
+
+a.text() is used to retrieve the body of the response as plain text.
+
+await ensures that b receives the response text only after it is fully available.
+-->
+
+
+<!-- A POST request is used to send data to a web server, typically for storage. Some common uses include:- Form submissions , File uploads , API interactions , Resource creation or update
+
+A PUT request is an HTTP method used to update or replace a resource on a server. It's used to send data to a server to create or update a resource.
+
+The DELETE request method is used to remove a resource from a server.
+  -->

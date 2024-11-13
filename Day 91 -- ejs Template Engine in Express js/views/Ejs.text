@@ -1,0 +1,4 @@
+<!-- we make the navbar a separate fiile wheere nav bar code exist , so using this code <%- include('navbar'); %> we can iclude the navbar fiile iinside this index file -->
+ <!-- <%- include('navbar' {brand:"Harry"}); %>
+// <%- include('navbar' {siteName:"Harry"}); %>  
+we can overwrite the property of sitename also -->
